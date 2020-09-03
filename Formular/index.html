@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formular</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <form>
+        <input name="firstName" type="text" placeholder="Vorname" required/>
+        <input name="lastName" type="text" placeholder="Nachname" required/>
+        <input name="street" type="text" placeholder="Strasse" required/>
+        <input name="streetNr" type="number" placeholder="Nr. (opt.)" />
+        <input name="zipCode" type="number" placeholder="PLZ" required/>
+        <input list="locations" name="location" type="text" placeholder="Ort" required/>
+
+        <datalist id="locations">
+            <option value="Wolfenschiessen"></option>
+            <option value="Luzern"></option>
+            <option value="Sursee"></option>
+            <option value="Basel"></option>
+            <option value="Bern"></option>
+            <option value="Zürich"></option>
+            <option value="Genf"></option>
+        </datalist>
+
+        <input name="age" type="number" placeholder="Alter (opt.)" />
+        <input name="email" type="email" placeholder="Email-Adresse" required/>
+
+        <button type="reset" name="clear">Verwerfen</button>
+        <button type="submit" name="submit">Senden</button>
+    </form>
+  </body>
 </html>
