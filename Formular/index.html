@@ -7,12 +7,14 @@
   </head>
   <body>
     <form>
-        <input name="firstName" type="text" placeholder="Vorname" required/>
-        <input name="lastName" type="text" placeholder="Nachname" required/>
-        <input name="street" type="text" placeholder="Strasse" required/>
-        <input name="streetNr" type="number" placeholder="Nr. (opt.)" />
-        <input name="zipCode" type="number" placeholder="PLZ" required/>
-        <input list="locations" name="location" type="text" placeholder="Ort" required/>
+        <input name="firstName" id="firstname" type="text" placeholder="Vorname" required pattern="^[A-Z]{1}[a-z]+$"/>
+        <input name="lastName" id="lastname" type="text" placeholder="Nachname" required pattern="^[A-Z]{1}[a-z]+$"/>
+        <br>
+        <input name="street" id="street" type="text" placeholder="Strasse" required pattern="^[A-Z]{1}[a-z|.|-]+$"/>
+        <input name="streetNr" id="streetNr" type="number" placeholder="Nr. (opt.)" />
+        <br>
+        <input name="zipCode" id="zipCode" type="number" placeholder="PLZ" required/>
+        <input list="locations" id="location" name="location" type="text" placeholder="Ort" required pattern="^[A-Z]{1}[a-z|.|-]+$"/>
 
         <datalist id="locations">
             <option value="Wolfenschiessen"></option>
@@ -23,12 +25,12 @@
             <option value="Zürich"></option>
             <option value="Genf"></option>
         </datalist>
-
-        <input name="age" type="number" placeholder="Alter (opt.)" />
-        <input name="email" type="email" placeholder="Email-Adresse" required/>
-
-        <button type="reset" name="clear">Verwerfen</button>
-        <button type="submit" name="submit">Senden</button>
+        <br>
+        <input name="age" id="age" type="number" placeholder="Alter (opt.)" />
+        <input name="email" id="email" type="email" placeholder="Email-Adresse" required/>
+        <br>
+        <button type="reset" id="clearBtn" name="clearBtn">Verwerfen</button>
+        <button type="submit" id="submitBtn" name="submitBtn">Senden</button>
     </form>
   </body>
 </html>
